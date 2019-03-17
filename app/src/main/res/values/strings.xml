@@ -1,0 +1,18 @@
+<resources>
+    //GERAL
+    <string name="app_name">bleSample</string>
+    <string name="ble_not_supported">O aparelho não suporta Bluetooth</string>
+
+    //SCAN BLE
+    <string name="scan_on">Scan BLE ON!</string>
+    <string name="scan_off">Scan BLE OFF!</string>
+    <string name="no_name">Dispositivo sem nome!</string>
+
+    //ACTIVITY_SCAN
+    <string name="btStart">PROCURAR!</string>
+    <string name="btStop">PARAR!</string>
+
+    //ACTIVITY_DEVICE
+    <string name="btDisc">DESCONECTAR!</string>
+
+</resources>
