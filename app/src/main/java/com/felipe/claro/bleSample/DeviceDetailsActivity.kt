@@ -45,6 +45,9 @@ class DeviceDetailsActivity : AppCompatActivity() {
 
 
                     //TRATAR PROBLEMA DE PERDA DE CONEXÃO
+                    runOnUiThread {
+                        displayNewValue("Falha ao conectar!!!")
+                    }
 //                    val detailIntent = Intent(applicationContext, DeviceDetailsActivity::class.java)
 //                    detailIntent.putExtra("device", gatt!!.device)
 //
@@ -90,7 +93,7 @@ class DeviceDetailsActivity : AppCompatActivity() {
             Log.d(tag, "VALUE: ${result[0]}")
 
             runOnUiThread {
-                displayNewValue(result[0])
+                displayNewValue(result[0].toString())
             }
 
             gatt!!.setCharacteristicNotification(characteristic, true)
@@ -104,7 +107,7 @@ class DeviceDetailsActivity : AppCompatActivity() {
             Log.d(tag, "VALUE: ${result[0]}")
 
             runOnUiThread {
-                displayNewValue(result[0])
+                displayNewValue(result[0].toString())
             }
         }
     }
@@ -128,8 +131,8 @@ class DeviceDetailsActivity : AppCompatActivity() {
         }
     }
 
-    private fun displayNewValue(byte: Byte)
+    private fun displayNewValue(value : String)
     {
-        textValue.text = byte.toString()
+        textValue.text = value
     }
 }
